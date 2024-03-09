@@ -1,0 +1,11 @@
+const Value = 5;
+
+if (Value === 5) {
+    console.display("Value = 5");
+}
+else {
+    console.display("Value != 5");
+}
+Value.name("Variable");
+Variable.type("Text");
+console.display(Variable)
