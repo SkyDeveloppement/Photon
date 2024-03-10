@@ -1,1 +1,2 @@
-console.display("Hello")
+let sto = 5;
+console.display(sto)
