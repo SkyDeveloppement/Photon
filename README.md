@@ -62,10 +62,10 @@ console.display("Hello World!")
 ## Variables
 Photon supports several types of variable declarations:
 
-**const**: For declaring a constant variable whose value cannot be changed.
-**let**: For declaring a variable whose value can be changed.
-**var**: For declaring a variable with a broader scope.
-**secure**: For declaring a secure variable that can only be modified with a specific key.
+- **const**: For declaring a constant variable whose value cannot be changed.
+- **let**: For declaring a variable whose value can be changed.
+- **var**: For declaring a variable with a broader scope.
+- **secure**: For declaring a secure variable that can only be modified with a specific key.
 Examples
 ```
 const pi = 3.14; // A constant for the value of pi
