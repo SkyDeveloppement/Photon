@@ -1,44 +1,44 @@
-# Photon IDE développé par SkyDevelopment
+# Photon IDE developed by SkyDevelopment
 
 from contentReader import CodeFile
 
 class PhotonClassic:
     def __init__(self):
-        self.variables = {}  # Dictionnaire pour stocker les variables et leurs types
+        self.variables = {}  # Dictionary to store variables and their types
 
     def execute_line(self, line):
-        # Gestion des déclarations de variables
+        # Handling variable declarations
         if any(line.startswith(var_type) for var_type in ["const ", "let ", "var ", "secure "]):
             declaration, value = line.split(' = ')
             var_type, var_name = declaration.split()
             value = value.strip('";')
 
-            # Gestion des types de valeur
+            # Handling value types
             if value.isdigit():
-                value = int(value)  # Convertir en nombre si c'est un chiffre
+                value = int(value)  # Convert to number if it's a digit
             elif value in ["True", "False"]:
-                value = value == "True"  # Convertir en booléen si c'est True ou False
-            # Ajouter d'autres conversions de type si nécessaire
+                value = value == "True"  # Convert to boolean if it's True or False
+            # Add other type conversions if necessary
 
-            # Stocker la variable avec son type et sa valeur
+            # Store the variable with its type and value
             self.variables[var_name] = {"type": var_type, "value": value}
 
-        # Gestion des commandes de la console
+        # Handling console commands
         elif line.startswith("console.display"):
             tokens = line.split('console.display')
             content = tokens[1].strip("();\" ")
             
-            # Vérifier si le contenu est une variable
+            # Check if content is a variable
             if content in self.variables:
-                print(self.variables[content]["value"])  # Afficher la valeur de la variable
+                print(self.variables[content]["value"])  # Display the value of the variable
             else:
-                print(content)  # Sinon, afficher le contenu directement
+                print(content)  # Otherwise, print the content directly
 
     def execute_code(self):
         for file_name, lines in CodeFile.items():
             for line in lines:
-                self.execute_line(line.strip())  # Appeler la méthode execute_line pour chaque ligne
+                self.execute_line(line.strip())  # Call execute_line method for each line
 
 if __name__ == "__main__":
-    classic = PhotonClassic()  # Créer une instance de la classe PhotonClassic
-    classic.execute_code()  # Appeler la méthode execute_code sur l'instance
+    classic = PhotonClassic()  # Create an instance of the PhotonClassic class
+    classic.execute_code()  # Call execute_code method on the instance

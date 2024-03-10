@@ -1,24 +1,24 @@
-# Photon IDE develloped by SkyDevellopement
+# Photon IDE developed by SkyDevelopment
 import json
 
-# Dictionnaire pour le stockage du contenu des fichiers de code
+# Dictionary for storing the content of code files
 CodeFile = {}
 
-# Ouvrir le fichier photon-pack.json
+# Open the photon-pack.json file
 with open("./photon-pack.json", "r") as pack:
-    # Charger les données JSON
+    # Load JSON data
     data = json.load(pack)
-    # Accéder à l'attribut "code" de JSON
+    # Access the "code" attribute of JSON
     code_data = data.get("code", {})
-    # Accéder à l'attribut "file" de "code"
+    # Access the "file" attribute of "code"
     files = code_data.get("file", [])
     
-    # Lire le contenu de chaque fichier spécifié
+    # Read the content of each specified file
     for file_name in files:
         with open(file_name) as reader:
-            # Vérifier si la clé existe dans TempCodeFile, sinon créer une liste vide
+            # Check if the key exists in CodeFile, otherwise create an empty list
             if file_name not in CodeFile:
                 CodeFile[file_name] = []
-            # Lire chaque ligne du fichier et l'ajouter à la liste correspondante
+            # Read each line of the file and add it to the corresponding list
             for line in reader:
                 CodeFile[file_name].append(line)
