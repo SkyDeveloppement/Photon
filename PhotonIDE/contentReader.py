@@ -5,7 +5,7 @@ import json
 CodeFile = {}
 
 # Open the photon-pack.json file
-with open("photon-pack.json", "r") as pack:
+with open("./photon-pack.json", "r") as pack:
     # Load JSON data
     data = json.load(pack)
     # Access the "code" attribute of JSON
@@ -17,4 +17,3 @@ with open("photon-pack.json", "r") as pack:
     for file_name in files:
         with open(file_name, "r") as code_file:
             CodeFile[file_name] = code_file.read()
-
