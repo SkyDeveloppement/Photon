@@ -14,20 +14,12 @@ def init_photon_pack():
         "IDE": {
             "version": "1.0.0",
             "ID": "Alpha",
-            "kit": "Devkit6 - 1.0.0"
+            "kit": "Devkit0 - 1.0.0"
         },
         "Library": {
-            "network": "1.0.0",
-            "machine": "1.0.0",
-            "os": "1.0.0",
-            "boson": "1.0.0",
-            "webkit": "1.0.0",
-            "atom": "1.0.0"
         },
-        "Import": ["script.js", "type.ts"],
+        "Import": [],
         "Database": {
-            "used": "sqlite",
-            "db": ["db.sqlite"]
         }
     }
 

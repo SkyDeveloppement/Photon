@@ -1,2 +1,4 @@
-let sto = 5;
+const sto = 5;
+console.display(sto)
+const sto = 7;
 console.display(sto)
