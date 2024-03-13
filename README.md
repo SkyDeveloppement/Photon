@@ -16,7 +16,8 @@ Photon aims to streamline the development process by providing a language that i
 # Photon Documentation
 
 ## Initialize workspace
-When you have import all the repository on your workscpace you can start code.
+When you have import all the repository on your workscpace you can start code. For simplify all you can download extension : https://marketplace.visualstudio.com/items?itemName=SkyDeveloppement.photon-extension .
+For more information on them go to the documentation of the extension.
 For benning you must create a file .photon for example "main.photon" and you must initialize the file photon-pack.json which is used by interpreter for many reason. For initialize them write and execute command in a terminal : 
 ```
 start PhotonIDE/init.bat
