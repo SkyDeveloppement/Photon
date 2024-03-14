@@ -22,3 +22,4 @@ with open("./photon-pack.json", "r") as pack:
             # Read each line of the file and add it to the corresponding list
             for line in reader:
                 CodeFile[file_name].append(line)
+print(CodeFile)

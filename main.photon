@@ -3,5 +3,4 @@ let liste = [["Bonjour", "Hola", "Hello"],["Hello", "Thanks"]];
 console.display(liste);
 
 liste[1][0] = 5;
-
-console.display(liste);
+liste
