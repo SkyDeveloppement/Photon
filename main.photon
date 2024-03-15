@@ -1,6 +1,7 @@
-let liste = [["Bonjour", "Hola", "Hello"],["Hello", "Thanks"]];
+let liste = ['Bonjour', 'Hola', 'Hello'];
 
 console.display(liste);
 
-liste[1][0] = 5;
-liste
+const OtherHello = 'Guten Tag'
+
+liste.add(OtherHello)

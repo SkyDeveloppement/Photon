@@ -24,7 +24,7 @@ if __name__ == "__main__":
  | _ \ | |_| |  / _ \ |_   _| / _ \  | \ | |
  |  _/ |  _  | | |_| |  | |  | |_| | | |\| |
  |_|   |_| |_|  \___/   |_|   \___/  |_| \_| . py
- Developed by SkyDevelopement
+ Developed by SkyDevelopement & 0N17
 =============================================================================
     """)
     # Finish of code with execution result
